@@ -1,0 +1,18 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #88E4A8;
+    box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+header h2 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
