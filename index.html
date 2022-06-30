@@ -29,25 +29,31 @@
         <div id="valuesInput">
             <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
             <p>A:</p>
-            <input placeholder="Valor de A" type="text">
+            <input placeholder="Valor de A" type="text" id="aValue">
             <p>B:</p>
-            <input placeholder="Valor de B" type="text">
+            <input placeholder="Valor de B" type="text" id="bValue">
             <p>C:</p>
-            <input placeholder="Valor de C" type="text">
-            <button>Calcular</button>
+            <input placeholder="Valor de C" type="text" id="cValue">
+            <button onclick="calculoBhaskara()">Calcular</button>
         </div>
 
-        <div id="deltaCalc">
+        <div id="delta">
             <h5 class="subtitle">Valor de Delta:</h5>
-            <div class="box"></div>
+            <div class="box" >
+                <input id="deltaCalc" type="text">
+            </div>
         </div>
 
         <div id="result">
             <h5 class="subtitle">Resultado:</h5>
             <p>X' =</p>
-            <div class="box"></div>
+            <div class="box">
+                <input id="x1Value" type="text">
+            </div>
             <p>X'' =</p>
-            <div class="box"></div>
+            <div class="box">
+                <input id="x2Value" type="text">
+            </div>
             <button>Reniciar</button>
         </div>
     </main>
