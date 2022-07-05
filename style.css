@@ -16,3 +16,28 @@ header h2 {
     color: white;
     text-align: center;
 }
+
+#deltaBigger--hide {
+   visibility: hidden;
+}
+
+#deltaBigger {
+    background-color: red;
+   
+}
+
+#deltaEqual--hide {
+    visibility: hidden;
+}
+
+#deltaEqual {
+    background-color: rgb(0, 255, 47);
+}
+
+#deltaSmaller--hide {
+    visibility: hidden;
+}
+
+#deltaSmaller {
+    background-color: rgb(0, 30, 255);
+}

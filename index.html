@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,51 +12,42 @@
       rel="stylesheet"
     />
     <!--STYLE-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Cálculos Matemáticos</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h2>Calculos Matematicos</h2>
+      <h2>Calculos Matematicos</h2>
     </header>
     <div id="menu">
-        <h4 id="title">Escolha a fórmula a ser resolvida: </h4>
-        <select id="calcSelection">
-            <option value="1">Fórmula de Bhaskara</option>
-        </select>
+      <h4 id="title">Escolha a fórmula a ser resolvida:</h4>
+      <select id="calcSelection">
+        <option value="1">Fórmula de Bhaskara</option>
+      </select>
     </div>
     <main>
-        <div id="valuesInput">
-            <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
-            <p>A:</p>
-            <input placeholder="Valor de A" type="text" id="aValue">
-            <p>B:</p>
-            <input placeholder="Valor de B" type="text" id="bValue">
-            <p>C:</p>
-            <input placeholder="Valor de C" type="text" id="cValue">
-            <button onclick="calculoBhaskara()">Calcular</button>
-        </div>
+      <div id="valuesInput">
+        <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
+        <p>A:</p>
+        <input placeholder="Valor de A" type="number" id="aValue" />
+        <p>B:</p>
+        <input placeholder="Valor de B" type="number" id="bValue" />
+        <p>C:</p>
+        <input placeholder="Valor de C" type="number" id="cValue" />
+        <button onclick="calculoBhaskara()">Calcular</button>
+      </div>
 
-        <div id="delta">
-            <h5 class="subtitle">Valor de Delta:</h5>
-            <div class="box" >
-                <p id="deltaCalc"></p>
-            </div>
+      <div id="delta">
+        <h5 class="subtitle">Valor de Delta:</h5>
+        <div class="box">
+          <p id="deltaCalc"></p>
         </div>
+      </div>
 
-        <div id="result">
-            <h5 class="subtitle">Resultado:</h5>
-            <p>X' =</p>
-            <div class="box">
-                <p id="x1result"></p>
-            </div>
-            <p>X'' =</p>
-            <div class="box">
-                <p id="x2result"></p>
-            </div>
-            <button>Reniciar</button>
-        </div>
+      <div id="deltaShow"></div>
+     
+      <button onclick="refresh()">Reniciar</button>
     </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
