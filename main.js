@@ -2,13 +2,16 @@ function calculoBhaskara() {
   var a = document.getElementById('aValue').value
   var b = document.getElementById('bValue').value
   var c = document.getElementById('cValue').value
-  var deltaResult = b ** 2 - (4 * a * c)
+  var deltaResult = b ** 2 - 4 * a * c
   var x1 = (b * -1 + Math.sqrt(deltaResult)) / (2 * a)
   var x2 = (b * -1 - Math.sqrt(deltaResult)) / (2 * a)
 
-  if (deltaResult > 0) {
-    document.getElementById('x1result').innerHTML = `${x1}`
-    document.getElementById('x2result').innerHTML = `${x2}`
+  if (a == 0) {
+    document.getElementById(
+      'deltaShow'
+    ).innerHTML = `<h4>Valor inválido informado para o parâmetro "A". Este não pode ter seu valor definido como "0".</h4>`
+    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+  } else if (deltaResult > 0) {
     document.getElementById('deltaShow').innerHTML = `
       <div>
         <h5 class="subtitle">Resultado:</h5>
@@ -22,9 +25,10 @@ function calculoBhaskara() {
         </div>
       </div>
       `
-  }
-  else if (deltaResult == 0) {
-    document.getElementById('result').innerHTML = `${x1}`
+    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+    document.getElementById('x1result').innerHTML = `${x1}`
+    document.getElementById('x2result').innerHTML = `${x2}`
+  } else if (deltaResult == 0) {
     document.getElementById('deltaShow').innerHTML = `
     <div>
       <h5 class="subtitle">Resultado</h5>
@@ -34,12 +38,14 @@ function calculoBhaskara() {
       </div>
     </div>
     `
+    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+    document.getElementById('result').innerHTML = `${x1}`
+  } else if (deltaResult < 0) {
+    document.getElementById(
+      'deltaShow'
+    ).innerHTML = `<h4>Não Existem resultados reais para os valores informados.</h4>`
+    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
   }
-  else {
-    document.getElementById('deltaShow').innerHTML =
-    `<h4>Não Existem resultados reais para os valores informados.</h4>`
-  }
-
 }
 
 function refresh() {
