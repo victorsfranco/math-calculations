@@ -1,3 +1,33 @@
+const content = document.getElementById('calcSelection').value
+switch (content) {
+  case '1':
+    document.getElementById('mainContent').innerHTML = `
+  <div id="valuesInput">
+        <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
+        <p>A:</p>
+        <input placeholder="Valor de A" type="number" id="aValue" />
+        <p>B:</p>
+        <input placeholder="Valor de B" type="number" id="bValue" />
+        <p>C:</p>
+        <input placeholder="Valor de C" type="number" id="cValue" />
+        <button onclick="calculoBhaskara()">Calcular</button>
+      </div>
+
+      <div id="delta">
+        <h5 class="subtitle">Valor de Delta:</h5>
+        <div class="box">
+          <p id="deltaCalc"></p>
+        </div>
+      </div>
+
+      <div id="deltaShow"></div>
+     
+      <button onclick="refresh()">Reniciar</button>
+  `
+    break
+  case '2':
+}
+
 function calculoBhaskara() {
   var a = document.getElementById('aValue').value
   var b = document.getElementById('bValue').value
