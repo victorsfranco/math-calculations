@@ -1,7 +1,7 @@
 window.onload = update()
 
-function update() {  
-  var select = document.getElementById('calcSelection');
+function update() {
+  var select = document.getElementById('calcSelection')
   switch (select.value) {
     case '1':
       document.getElementById('mainContent').innerHTML = `
@@ -13,7 +13,7 @@ function update() {
           <input placeholder="Valor de B" type="number" id="bValue" />
           <p>C:</p>
           <input placeholder="Valor de C" type="number" id="cValue" />
-          <button onclick="calculoBhaskara()">Calcular</button>
+          <button onclick="bhaskaraCalculation()">Calcular</button>
         </div>
   
         <div id="delta">
@@ -27,14 +27,28 @@ function update() {
        
         <button onclick="refresh()">Reniciar</button>
     `
-  
-      break;
+
+      break
     case '2':
-      document.getElementById('mainContent').innerHTML = ``
+      document.getElementById('mainContent').innerHTML = `
+      <h5>
+      Informe os valores iniciais para que o valor desejado seja encontrado:
+    </h5>
+    <div>
+      <input type="number" id="n1" />
+      <p>Está para</p>
+      <input type="number" id="n2" />
+      <p>Bem como</p>
+      <input type="number" id="n3" />
+      <p>Está para</p>
+      <button onclick="ruleOfThree()">Calcular</button>
+      <div class="box" id="ruleOfThreeResult"></div>
+    </div>
+      `
   }
 }
 
-function calculoBhaskara() {
+function bhaskaraCalculation() {
   var a = document.getElementById('aValue').value
   var b = document.getElementById('bValue').value
   var c = document.getElementById('cValue').value
@@ -88,6 +102,15 @@ function refresh() {
   location.reload()
 }
 
+function ruleOfThree() {
+  n1 = document.getElementById('n1').value
+  n2 = document.getElementById('n2').value
+  n3 = document.getElementById('n3').value
+  result = (n2 * n3) / n1
+  document.getElementById('ruleOfThreeResult').innerHTML = `
+  ${result}
+  `
+}
 
 /*
 Para DELTA > 0 : a == x / b == x / c == x
