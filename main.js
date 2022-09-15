@@ -5,16 +5,21 @@ function update() {
   switch (select.value) {
     case '1':
       document.getElementById('mainContent').innerHTML = `
-    <div id="valuesInput">
-          <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
-          <p>A:</p>
-          <input placeholder="Valor de A" type="number" id="aValue" />
-          <p>B:</p>
-          <input placeholder="Valor de B" type="number" id="bValue" />
-          <p>C:</p>
-          <input placeholder="Valor de C" type="number" id="cValue" />
-          <button onclick="bhaskaraCalculation()">Calcular</button>
-        </div>
+    <div id="bhaskaraInitialValues">
+
+      <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
+      <p>A:</p>
+      <input placeholder="Valor de A" type="number" class="valueBox" id="aValue" />
+
+      <p>B:</p>
+      <input placeholder="Valor de B" type="number" class="valueBox" id="bValue" />
+
+      <p>C:</p>
+      <input placeholder="Valor de C" type="number" class="valueBox" id="cValue" />
+      
+
+      <button onclick="bhaskaraCalculation()">Calcular</button>
+    </div>
   
         <div id="delta">
           <h5 class="subtitle">Valor de Delta:</h5>

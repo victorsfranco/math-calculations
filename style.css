@@ -8,11 +8,19 @@
 }
 
 body {
-    margin: 0 1rem;
+    margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    margin: 0 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+}
 
 /* ----- HEADER ----- */
 
@@ -33,14 +41,37 @@ span {
 }
 /* ----- CALCULATION SELECTION ----- */
 
-#menu {
-    margin: 1rem;
+nav {
+    margin-top: 2rem;
+    padding: 1rem 1rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#calcSelection {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ded6fc;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+/* ----- MAIN CONTENT ----- */
+
+#bhaskaraInitialValues {
+    padding: 5rem 8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#valuesInput {
+    background-color: green;
+    padding: 4rem;
+    margin: 0;
+}
 
 
 /* ----- FOOTER ----- */
