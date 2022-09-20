@@ -2,85 +2,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
 }
 
 main {
-    margin: 0 2rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: large;
+   margin: 0 2rem;
+   padding: 2rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   font-size: large;
 }
 
 /* ----- HEADER ----- */
 
 header {
-    background-color: #dfdcff;
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-    border: 0.5px solid #ded6fc;
+   background-color: #dfdcff;
+   display: flex;
+   justify-content: center;
+   padding: 3rem;
+   border: 0.5px solid #ded6fc;
 }
 
 header h1 {
-    font-family: 'Goldman';
+   font-family: 'Goldman';
 }
 
 span {
-    color: rgb(66, 21, 214);
+   color: #4e21f0;
+}
+
+button {
+   background-color: #8467f1;
+   color: #ffffff;
+   border: #ded6fc;
+   border-radius: 0.75rem;
+}
+
+button:hover {
+   background-color: #4e21f0;
+   cursor: pointer;
 }
 /* ----- CALCULATION SELECTION ----- */
 
 nav {
-    margin-top: 2rem;
-    padding: 1rem 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   margin: 2rem 0;
+   padding: 1rem 1rem;
+   font-size: 1.9rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 #calcSelection {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #ded6fc;
-    border: none;
-    border-radius: 0.25rem;
+   margin-left: 1rem;
+   padding: 0.5rem 1rem;
+   background-color: #ded6fc;
+   border: none;
+   border-radius: 0.25rem;
 }
 
 /* ----- MAIN CONTENT ----- */
 
 #bhaskaraInitialValues {
-    padding: 5rem 8rem;
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
 }
 
-
-#valuesInput {
-    background-color: green;
-    padding: 4rem;
-    margin: 0;
+#bhaskaraInitialValues:last-child {
+   background-color: ;
 }
 
+.subtitle {
+   font-size: 1.4rem;
+   font-weight: 500;
+   margin-bottom: 2rem;
+}
 
+.inputValues {
+   display: flex;
+   padding: 1rem;
+   align-items: baseline;
+}
+
+.valueBox {
+   margin-left: 1rem;
+   padding: 0.5rem 0;
+   width: 4rem;
+}
+
+#calcButton {
+   margin-top: 2rem;
+   margin-left: 2rem;
+   height: 2rem;
+   width: 4rem;
+}
+
+#refreshButton {
+   height: 2rem;
+   width: 4rem;
+}
+
+#delta {
+}
 /* ----- FOOTER ----- */
 
 footer {
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    background-color: #dfdcff;
-    color:rgb(66, 21, 214);
-    border: 0.5px solid #ded6fc;
+   display: flex;
+   padding: 2rem;
+   justify-content: center;
+   background-color: #dfdcff;
+   color: #4e21f0;
+   border: 0.5px solid #ded6fc;
 }
