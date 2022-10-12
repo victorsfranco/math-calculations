@@ -22,7 +22,6 @@ function update() {
             <p>C:</p>
             <input placeholder="C..." type="number" class="valueBox" id="cValue" />
          </div>
-
          <button onclick="bhaskaraCalculation()" id="calcButton">Calcular</button>
       </div>
   
