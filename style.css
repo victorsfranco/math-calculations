@@ -1,55 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    margin: 0 1rem;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+	background-color: #dfdcff;
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter';
 }
 
+main {
+	padding: 2rem;
+	display: column;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: large;
+}
 
 /* ----- HEADER ----- */
 
 header {
-    background-color: #dfdcff;
-    display: flex;
-    justify-content: center;
-    padding: 3rem;
-    border: 0.5px solid #ded6fc;
+	background-color: #dfdcff;
+	display: flex;
+	justify-content: center;
+	padding: 3rem;
+	border: 0.5px solid #ded6fc;
 }
 
 header h1 {
-    font-family: 'Goldman';
+	font-family: 'Poppins';
 }
 
 span {
-    color: rgb(66, 21, 214);
+	color: #4e21f0;
 }
+
+.buttons {
+	background-color: #8467f1;
+	color: #ffffff;
+	border: #ded6fc;
+	border-radius: 0.25rem;
+	transition: 0.25s;
+
+	margin: 0.5rem;
+	height: 2rem;
+	width: 4rem;
+}
+
+button:hover {
+	background-color: #4e21f0;
+	cursor: pointer;
+	
+}
+
 /* ----- CALCULATION SELECTION ----- */
 
-#menu {
-    margin: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav {
+	margin: 2rem 0;
+	padding: 1rem 1rem;
+	font-size: 1.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+#calcSelection {
+	margin-left: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: #cdc3f0;
+	border: 1px solid;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
 
+/* ----- MAIN CONTENT ----- */
+
+#mainContent {
+	margin: 0 10rem;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#bhaskaraInitialValues {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.subtitle {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.inputValues {
+	display: flex;
+	padding: 1rem;
+	align-items: baseline;
+}
+
+.valueBox {
+	margin-left: 1rem;
+	padding: 0.5rem 0;
+	width: 4rem;
+}
+
+#delta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#try {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.xResult {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0.25rem 0;
+}
+
+#bhaskaraResult {
+	font-size: 1.4rem;
+	margin: 1rem 0;
+
+}
+
+.box {
+	margin: 0 0.5rem;
+}
+
+#refreshButton {
+	height: 2rem;
+	width: 4rem;
+}
 
 /* ----- FOOTER ----- */
 
 footer {
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-    background-color: #dfdcff;
-    color:rgb(66, 21, 214);
-    border: 0.5px solid #ded6fc;
+	display: flex;
+	padding: 2rem;
+	justify-content: center;
+	background-color: #dfdcff;
+	color: #4e21f0;
+	border: 0.5px solid #ded6fc;
 }

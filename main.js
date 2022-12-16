@@ -1,36 +1,45 @@
 window.onload = update()
 
 function update() {
-  var select = document.getElementById('calcSelection')
-  switch (select.value) {
-    case '1':
-      document.getElementById('mainContent').innerHTML = `
-    <div id="valuesInput">
-          <h5 class="subtitle">Informe abaixo os valores iniciais:</h5>
-          <p>A:</p>
-          <input placeholder="Valor de A" type="number" id="aValue" />
-          <p>B:</p>
-          <input placeholder="Valor de B" type="number" id="bValue" />
-          <p>C:</p>
-          <input placeholder="Valor de C" type="number" id="cValue" />
-          <button onclick="bhaskaraCalculation()">Calcular</button>
-        </div>
+	var select = document.getElementById('calcSelection')
+	switch (select.value) {
+		case '1':
+			document.getElementById('mainContent').innerHTML = `
+      <div id="bhaskaraInitialValues">
+         <h5 class="subtitle">Informe os valores iniciais:</h5>
+
+         <div class="inputValues">
+            <p>A:</p>
+            <input placeholder= "A..." type="number" class="valueBox"    id="aValue" />
+         </div>
+
+         <div class="inputValues">
+            <p>B:</p>
+            <input placeholder="B..." type="number" class="valueBox" id="bValue" />
+         </div>
+
+         <div class="inputValues">
+            <p>C:</p>
+            <input placeholder="C..." type="number" class="valueBox" id="cValue" />
+         </div>
+         <button onclick="bhaskaraCalculation()" class="buttons">Calcular</button>
+      </div>
   
-        <div id="delta">
-          <h5 class="subtitle">Valor de Delta:</h5>
-          <div class="box">
+      <div id="delta">
+         <h5 class="subtitle">Valor de Delta:</h5>
+         <div class="box">
             <p id="deltaCalc"></p>
-          </div>
-        </div>
+         </div>
+      </div>
   
         <div id="deltaShow"></div>
        
-        <button onclick="refresh()">Reniciar</button>
+        <button onclick="refresh()" class="buttons">Reniciar</button>
     `
 
-      break
-    case '2':
-      document.getElementById('mainContent').innerHTML = `
+			break
+		case '2':
+			document.getElementById('mainContent').innerHTML = `
       <h5>
       Informe os valores iniciais para que o valor desejado seja encontrado:
     </h5>
@@ -41,45 +50,49 @@ function update() {
       <p>Bem como</p>
       <input type="number" id="n3" />
       <p>Está para</p>
-      <button onclick="ruleOfThree()">Calcular</button>
+      <button onclick="ruleOfThree()" class="buttons">Calcular</button>
       <div class="box" id="ruleOfThreeResult"></div>
     </div>
       `
-  }
+	}
 }
 
 function bhaskaraCalculation() {
-  var a = document.getElementById('aValue').value
-  var b = document.getElementById('bValue').value
-  var c = document.getElementById('cValue').value
-  var deltaResult = b ** 2 - 4 * a * c
-  var x1 = (b * -1 + Math.sqrt(deltaResult)) / (2 * a)
-  var x2 = (b * -1 - Math.sqrt(deltaResult)) / (2 * a)
+	var a = document.getElementById('aValue').value
+	var b = document.getElementById('bValue').value
+	var c = document.getElementById('cValue').value
+	var deltaResult = b ** 2 - 4 * a * c
+	var x1 = (b * -1 + Math.sqrt(deltaResult)) / (2 * a)
+	var x2 = (b * -1 - Math.sqrt(deltaResult)) / (2 * a)
 
-  if (a == 0) {
-    document.getElementById(
-      'deltaShow'
-    ).innerHTML = `<h4>Valor inválido informado para o parâmetro "A". Este não pode ter seu valor definido como "0".</h4>`
-    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
-  } else if (deltaResult > 0) {
-    document.getElementById('deltaShow').innerHTML = `
-      <div>
-        <h5 class="subtitle">Resultado:</h5>
-        <p>X' =</p>
-        <div class="box">
-          <p id="x1result"></p>
+	if (a == 0) {
+		document.getElementById(
+			'deltaShow'
+		).innerHTML = `<h4>Valor inválido informado para o parâmetro "A". Este não pode ter seu valor definido como "0".</h4>`
+		document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+	} else if (deltaResult > 0) {
+		document.getElementById('deltaShow').innerHTML = `
+      <div id="try">
+        <h5 id="bhaskaraResult">Resultado:</h5>
+        <div class="xResult">
+        	<p>X' =</p>
+         	<div class="box">
+            <p id="x1result"></p>
+        	</div>
         </div>
-        <p>X'' =</p>
-        <div class="box">
-          <p id="x2result"></p>
-        </div>
+				<div class="xResult">
+        	<p>X'' =</p>
+        	<div class="box">
+          	<p id="x2result"></p>
+        	</div>
+				</div>
       </div>
       `
-    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
-    document.getElementById('x1result').innerHTML = `${x1}`
-    document.getElementById('x2result').innerHTML = `${x2}`
-  } else if (deltaResult == 0) {
-    document.getElementById('deltaShow').innerHTML = `
+		document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+		document.getElementById('x1result').innerHTML = `${x1}`
+		document.getElementById('x2result').innerHTML = `${x2}`
+	} else if (deltaResult == 0) {
+		document.getElementById('deltaShow').innerHTML = `
     <div>
       <h5 class="subtitle">Resultado</h5>
       <p>X = </p>
@@ -88,26 +101,26 @@ function bhaskaraCalculation() {
       </div>
     </div>
     `
-    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
-    document.getElementById('result').innerHTML = `${x1}`
-  } else if (deltaResult < 0) {
-    document.getElementById(
-      'deltaShow'
-    ).innerHTML = `<h4>Não Existem resultados reais para os valores informados.</h4>`
-    document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
-  }
+		document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+		document.getElementById('result').innerHTML = `${x1}`
+	} else if (deltaResult < 0) {
+		document.getElementById(
+			'deltaShow'
+		).innerHTML = `<h4>Não Existem resultados reais para os valores informados.</h4>`
+		document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
+	}
 }
 
 function refresh() {
-  location.reload()
+	location.reload()
 }
 
 function ruleOfThree() {
-  n1 = document.getElementById('n1').value
-  n2 = document.getElementById('n2').value
-  n3 = document.getElementById('n3').value
-  result = (n2 * n3) / n1
-  document.getElementById('ruleOfThreeResult').innerHTML = `
+	n1 = document.getElementById('n1').value
+	n2 = document.getElementById('n2').value
+	n3 = document.getElementById('n3').value
+	result = (n2 * n3) / n1
+	document.getElementById('ruleOfThreeResult').innerHTML = `
   ${result}
   `
 }
