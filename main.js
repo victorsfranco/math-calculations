@@ -72,7 +72,7 @@ function bhaskaraCalculation() {
 		document.getElementById('deltaCalc').innerHTML = `${deltaResult}`
 	} else if (deltaResult > 0) {
 		document.getElementById('deltaShow').innerHTML = `
-      <div id="try">
+      <div id="resultShow">
         <h5 id="bhaskaraResult">Resultado:</h5>
         <div class="xResult">
         	<p>X' =</p>
